@@ -5,20 +5,26 @@
   <title>Jin Chen</title>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Lato|Source+Code+Pro" rel="stylesheet">
   <link href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.rawgit.com/konpa/devicon/df6431e323547add1b4cf45992913f15286456d3/devicon.min.css">
   <script src="./bundle.js"></script>
 </head>
 
 <body>
   <div class="page-wrapper">
-    <div :class="'tab about ' + (about() && 'selected')" @click="clickAbout()">
+    <div :class="'tab about ' + (about() && 'selected')" @click="handleClick('ABOUT')">
       A<br> B<br> O<br> U<br> T<br>
     </div>
 
-    <div :class="'tab work ' + (work() && 'selected')" @click="clickWork()">
+    <div :class="'tab work ' + (work() && 'selected')" @click="handleClick('WORK')">
       W<br> O<br> R<br> K<br>
     </div>
+
+    <div :class="'tab resume ' + (resume() && 'selected')" @click="handleClick('RESUME')">
+      R<br> E<br> S<br> U<br> M<br> E<br>
+    </div>
+
 
     <div :class="about() ? 'header-wrapper' : 'header-wrapper-minimized' ">
       <img src="./src/assets/avatar.svg" alt="avatar"></img>
@@ -40,6 +46,39 @@
           Twitter
         </a>
       </nav>
+    </div>
+
+    <div v-if="page === 'ABOUT'" class="about-content">
+      <h5>I'm a software engineer who loves designing things.</h5>
+      <h5>Currently based in the SF Bay Area.</h5>
+      <br>
+      <h5>My Skills:</h5>
+
+      <div class="icon-container">
+        <i class="devicon-html5-plain-wordmark colored"></i>
+        <i class="devicon-css3-plain-wordmark colored"></i>
+        <i class="devicon-sass-original colored"></i>
+        <i class="devicon-bootstrap-plain-wordmark colored"></i>
+        <!--JavaScript SVG-->
+        <div>
+          <svg viewBox="0 0 128 128">
+            <path fill="#F0DB4F" d="M1.408 1.408h125.184v125.185h-125.184z"></path>
+            <path fill="#323330" d="M116.347 96.736c-.917-5.711-4.641-10.508-15.672-14.981-3.832-1.761-8.104-3.022-9.377-5.926-.452-1.69-.512-2.642-.226-3.665.821-3.32 4.784-4.355 7.925-3.403 2.023.678 3.938 2.237 5.093 4.724 5.402-3.498 5.391-3.475 9.163-5.879-1.381-2.141-2.118-3.129-3.022-4.045-3.249-3.629-7.676-5.498-14.756-5.355l-3.688.477c-3.534.893-6.902 2.748-8.877 5.235-5.926 6.724-4.236 18.492 2.975 23.335 7.104 5.332 17.54 6.545 18.873 11.531 1.297 6.104-4.486 8.08-10.234 7.378-4.236-.881-6.592-3.034-9.139-6.949-4.688 2.713-4.688 2.713-9.508 5.485 1.143 2.499 2.344 3.63 4.26 5.795 9.068 9.198 31.76 8.746 35.83-5.176.165-.478 1.261-3.666.38-8.581zm-46.885-37.793h-11.709l-.048 30.272c0 6.438.333 12.34-.714 14.149-1.713 3.558-6.152 3.117-8.175 2.427-2.059-1.012-3.106-2.451-4.319-4.485-.333-.584-.583-1.036-.667-1.071l-9.52 5.83c1.583 3.249 3.915 6.069 6.902 7.901 4.462 2.678 10.459 3.499 16.731 2.059 4.082-1.189 7.604-3.652 9.448-7.401 2.666-4.915 2.094-10.864 2.07-17.444.06-10.735.001-21.468.001-32.237z"></path>
+          </svg>
+        </div>
+        <i class="devicon-react-original-wordmark colored"></i>
+        <i class="devicon-vuejs-plain-wordmark colored"></i>
+        <i class="devicon-git-plain-wordmark colored"></i>
+        <i class="devicon-ruby-plain-wordmark colored"></i>
+        <i class="devicon-rails-plain-wordmark colored"></i>
+        <i class="devicon-postgresql-plain-wordmark colored"></i>
+        <i class="devicon-nginx-original colored"></i>
+        <i class="devicon-babel-plain colored"></i>
+        <i class="devicon-webpack-plain-wordmark colored"></i>
+        <i class="devicon-photoshop-plain colored"></i>
+        <i class="devicon-illustrator-plain colored"></i>
+      </div>
+
     </div>
 
   </div>

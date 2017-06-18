@@ -14,11 +14,11 @@ document.addEventListener("DOMContentLoaded", () => {
       work() {
         return this.page === 'WORK';
       },
-      clickAbout() {
-        this.page = 'ABOUT';
+      resume() {
+        return this.page === 'RESUME';
       },
-      clickWork() {
-        this.page = 'WORK';
+      handleClick(type) {
+        this.page = type;
       }
     }
   });
