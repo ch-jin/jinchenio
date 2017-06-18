@@ -78,9 +78,14 @@
         <i class="devicon-photoshop-plain colored"></i>
         <i class="devicon-illustrator-plain colored"></i>
       </div>
-
     </div>
 
+    <div v-if="page === 'WORK'" class="work-container">
+    </div>
+
+    <div v-if="page === 'RESUME'" class="resume-container">
+      <embed src="./src/assets/jin_chen_resume.pdf" width="800" height="375" type='application/pdf'>
+    </div>
   </div>
 </body>
 

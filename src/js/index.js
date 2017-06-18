@@ -1,25 +1,25 @@
-import Vue from './vue.min.js';
+import Vue from "./vue.min.js";
 require("../scss/index.scss");
 
 document.addEventListener("DOMContentLoaded", () => {
   const app = new Vue({
     el: ".page-wrapper",
     data: {
-      page: 'ABOUT'
+      page: "WORK",
     },
     methods: {
       about() {
-        return this.page === 'ABOUT';
+        return this.page === "ABOUT";
       },
       work() {
-        return this.page === 'WORK';
+        return this.page === "WORK";
       },
       resume() {
-        return this.page === 'RESUME';
+        return this.page === "RESUME";
       },
       handleClick(type) {
         this.page = type;
-      }
-    }
+      },
+    },
   });
 });
