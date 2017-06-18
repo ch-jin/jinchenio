@@ -12,28 +12,36 @@
 
 <body>
   <div class="page-wrapper">
-    <div class="header-wrapper">
+    <div :class="'tab about ' + (about() && 'selected')" @click="clickAbout()">
+      A<br> B<br> O<br> U<br> T<br>
+    </div>
+
+    <div :class="'tab work ' + (work() && 'selected')" @click="clickWork()">
+      W<br> O<br> R<br> K<br>
+    </div>
+
+    <div :class="about() ? 'header-wrapper' : 'header-wrapper-minimized' ">
       <img src="./src/assets/avatar.svg" alt="avatar"></img>
       <div class="header">
         <h1>Jin Chen</h1>
         <h5>Software Engineer</h5>
       </div>
+      <nav>
+        <a href="https://github.com/jinchen93/" target="_blank">
+          <i class="icon ion-social-github"></i>
+          Github
+        </a>
+        <a href="https://www.linkedin.com/in/jinchen93/" target="_blank">
+          <i class="icon ion-social-linkedin"></i>
+          LinkedIn
+        </a>
+        <a href="https://twitter.com/_jinchen" target="_blank">
+          <i class="icon ion-social-twitter"></i>
+          Twitter
+        </a>
+      </nav>
     </div>
 
-    <nav>
-      <a href="https://github.com/jinchen93/">
-        <i class="icon ion-social-github"></i>
-        Github
-      </a>
-      <a href="https://www.linkedin.com/in/jinchen93/">
-        <i class="icon ion-social-linkedin"></i>
-        LinkedIn
-      </a>
-      <a href="https://twitter.com/_jinchen">
-        <i class="icon ion-social-twitter"></i>
-        Twitter
-      </a>
-    </nav>
   </div>
 </body>
 
