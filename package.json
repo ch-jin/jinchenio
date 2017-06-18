@@ -5,8 +5,8 @@
   "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build-css": "node-sass style.scss style.css",
-    "start": "concurrently \"nodemon devServer.js\" \"nodemon -e scss --watch scss -x npm run build-css\""
+    "build": "webpack",
+    "start": "webpack-dev-server -w --inline"
   },
   "repository": {
     "type": "git",
@@ -20,11 +20,13 @@
   },
   "homepage": "https://github.com/jinchen93/jinchenio#readme",
   "dependencies": {
-    "express": "^4.15.3"
-  },
-  "devDependencies": {
-    "concurrently": "^3.4.0",
+    "css-loader": "^0.28.4",
+    "express": "^4.15.3",
     "node-sass": "^4.5.3",
-    "nodemon": "^1.11.0"
-  }
+    "sass-loader": "^6.0.6",
+    "style-loader": "^0.18.2",
+    "webpack": "^2.6.1",
+    "webpack-dev-server": "^2.4.5"
+  },
+  "devDependencies": {}
 }
