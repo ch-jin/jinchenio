@@ -94,7 +94,8 @@ h5 {
 
 .header-wrapper-minimized {
   display: flex;
-  flex-wrap: wrap;
+  flex: 1;
+
   img {
     transition: all 200ms;
     margin-top: 5px;
@@ -206,10 +207,11 @@ h5 {
 }
 
 .work-container {
+  flex: 8;
   overflow: auto;
   display: flex;
   flex-wrap: wrap;
-  padding: 20px;
+  padding: 10px 20px;
   .work-item {
     width: 50%;
     flex: 1;
@@ -219,12 +221,14 @@ h5 {
     flex-direction: column;
     margin: 10px;
     padding: 20px;
+    background: #fefefe;
     border: 1px solid #e7e7e7;
     line-height: 1.2em;
     img {
-      opacity: 0.75;
+      opacity: 0.9;
       box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
-      width: 275px;
+      height: 136px;
+      width: 250px;
       margin-bottom: 15px;
     }
     h5 {
