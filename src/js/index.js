@@ -5,7 +5,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const app = new Vue({
     el: ".page-wrapper",
     data: {
-      page: "WORK",
+      page: "ABOUT",
     },
     methods: {
       about() {
