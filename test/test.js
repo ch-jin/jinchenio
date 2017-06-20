@@ -3,9 +3,8 @@ const App = require("../src/js/app");
 const assert = require("assert");
 
 describe("App", () => {
-  it("is a Vue instance", () => {
+  it("is a Vue instance", function() {
     const app = App();
     assert(app instanceof Vue);
-    const app2 = Vue.extend(app);
   });
 });
