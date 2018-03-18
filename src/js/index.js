@@ -14,9 +14,6 @@ document.addEventListener("DOMContentLoaded", () => {
       work() {
         return this.page === "WORK";
       },
-      resume() {
-        return this.page === "RESUME";
-      },
       handleClick(type) {
         this.page = type;
       },
